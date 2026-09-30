@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kiran Academy | Learn. Grow. Succeed.</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="logo">
+        <span>K</span>
+        <div>
+          <h2>Kiran Academy</h2>
+          <small>Learn • Grow • Succeed</small>
+        </div>
+      </div>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-tag">WELCOME TO KIRAN ACADEMY</p>
+
+        <h1>
+          Learn Skills That
+          <span>Build Your Future</span>
+        </h1>
+
+        <p>
+          Learn industry-ready skills from expert instructors and take your
+          career to the next level.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#courses" class="btn primary-btn"> Explore Courses </a>
+
+          <a href="#about" class="btn secondary-btn"> Learn More </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="floating-card card-one">
+          🎓
+          <div>
+            <strong>10K+</strong>
+            <small>Students</small>
+          </div>
+        </div>
+
+        <div class="floating-card card-two">
+          ⭐
+          <div>
+            <strong>4.9/5</strong>
+            <small>Student Rating</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+      <div>
+        <h2>10K+</h2>
+        <p>Students</p>
+      </div>
+
+      <div>
+        <h2>50+</h2>
+        <p>Courses</p>
+      </div>
+
+      <div>
+        <h2>30+</h2>
+        <p>Expert Mentors</p>
+      </div>
+
+      <div>
+        <h2>95%</h2>
+        <p>Success Rate</p>
+      </div>
+    </section>
+
+    <!-- ================= COURSES ================= -->
+
+    <section class="courses-section" id="courses">
+      <div class="section-heading">
+        <p>OUR COURSES</p>
+
+        <h2>Learn From The Best</h2>
+
+        <span> Choose from our industry-focused courses. </span>
+      </div>
+
+      <!-- Search -->
+
+      <div class="course-search">
+        <input
+          type="text"
+          id="courseSearch"
+          placeholder="Search courses..."
+          onkeyup="searchCourses()"
+        />
+      </div>
+
+      <div class="course-container" id="courseContainer">
+        <!-- COURSE 1 -->
+
+        <div class="course-card" data-name="web development">
+          <div class="course-image web">
+            <span>WEB DEVELOPMENT</span>
+          </div>
+
+          <div class="course-content">
+            <span class="course-category"> Development </span>
+
+            <h3>Full Stack Web Development</h3>
+
+            <p>
+              Learn HTML, CSS, JavaScript, React, Node.js, Express and MongoDB.
+            </p>
+
+            <div class="course-info">
+              <span>⏱ 6 Months</span>
+              <span>👨‍🎓 Beginner</span>
+            </div>
+
+            <div class="course-bottom">
+              <strong>₹14,999</strong>
+
+              <button
+                onclick="openCourse('Full Stack Web Development', '₹14,999')"
+              >
+                View Course
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- COURSE 2 -->
+
+        <div class="course-card" data-name="python programming">
+          <div class="course-image python">
+            <span>PYTHON</span>
+          </div>
+
+          <div class="course-content">
+            <span class="course-category"> Programming </span>
+
+            <h3>Python Programming</h3>
+
+            <p>Master Python programming from basics to advanced concepts.</p>
+
+            <div class="course-info">
+              <span>⏱ 4 Months</span>
+              <span>👨‍🎓 Beginner</span>
+            </div>
+
+            <div class="course-bottom">
+              <strong>₹9,999</strong>
+
+              <button onclick="openCourse('Python Programming', '₹9,999')">
+                View Course
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- COURSE 3 -->
+
+        <div class="course-card" data-name="java programming">
+          <div class="course-image java">
+            <span>JAVA</span>
+          </div>
+
+          <div class="course-content">
+            <span class="course-category"> Programming </span>
+
+            <h3>Java Programming</h3>
+
+            <p>Learn Java, OOP, collections, exception handling and more.</p>
+
+            <div class="course-info">
+              <span>⏱ 5 Months</span>
+              <span>👨‍🎓 Intermediate</span>
+            </div>
+
+            <div class="course-bottom">
+              <strong>₹11,999</strong>
+
+              <button onclick="openCourse('Java Programming', '₹11,999')">
+                View Course
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- COURSE 4 -->
+
+        <div class="course-card" data-name="data science">
+          <div class="course-image data">
+            <span>DATA SCIENCE</span>
+          </div>
+
+          <div class="course-content">
+            <span class="course-category"> Data Science </span>
+
+            <h3>Data Science & AI</h3>
+
+            <p>
+              Learn Python, data analysis, machine learning and AI fundamentals.
+            </p>
+
+            <div class="course-info">
+              <span>⏱ 6 Months</span>
+              <span>👨‍🎓 Intermediate</span>
+            </div>
+
+            <div class="course-bottom">
+              <strong>₹17,999</strong>
+
+              <button onclick="openCourse('Data Science & AI', '₹17,999')">
+                View Course
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY US ================= -->
+
+    <section class="why-us">
+      <div class="section-heading">
+        <p>WHY KIRAN ACADEMY?</p>
+
+        <h2>Everything You Need To Grow</h2>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">👨‍🏫</div>
+
+          <h3>Expert Instructors</h3>
+
+          <p>Learn from experienced instructors with industry knowledge.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">💻</div>
+
+          <h3>Practical Learning</h3>
+
+          <p>Work on real-world projects and practical assignments.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📜</div>
+
+          <h3>Course Certificate</h3>
+
+          <p>
+            Receive a certificate after successfully completing your course.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">💼</div>
+
+          <h3>Career Support</h3>
+
+          <p>Get interview preparation, resume guidance and career support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+      <div class="about-image">
+        <div class="about-placeholder">KIRAN<br />ACADEMY</div>
+      </div>
+
+      <div class="about-content">
+        <p>ABOUT KIRAN ACADEMY</p>
+
+        <h2>Building Skills. Creating Opportunities.</h2>
+
+        <p>
+          Kiran Academy is a learning platform focused on helping students and
+          professionals develop practical, industry-ready skills.
+        </p>
+
+        <p>
+          Our courses combine expert guidance, practical projects and structured
+          learning to help students move confidently toward their career goals.
+        </p>
+
+        <a href="#contact" class="btn primary-btn"> Contact Us </a>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+      <h2>Ready To Start Learning?</h2>
+
+      <p>Choose your course and start building your future today.</p>
+
+      <a href="#courses" class="btn primary-btn"> Browse Courses </a>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+      <div class="section-heading">
+        <p>CONTACT US</p>
+
+        <h2>Have Questions?</h2>
+
+        <span> Our team is here to help you. </span>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span>📍</span>
+
+            <div>
+              <h3>Address</h3>
+              <p>Kiran Academy, Maharashtra, India</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span>📧</span>
+
+            <div>
+              <h3>Email</h3>
+              <p>info@kiranacademy.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span>📞</span>
+
+            <div>
+              <h3>Phone</h3>
+              <p>+91 98765 43210</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+
+          <input type="email" id="email" placeholder="Your Email" required />
+
+          <input type="tel" id="phone" placeholder="Phone Number" required />
+
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+
+          <button type="submit" class="btn primary-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <div class="footer-container">
+        <div>
+          <h2>Kiran Academy</h2>
+
+          <p>Empowering learners with industry-ready skills.</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <a href="#home">Home</a>
+          <a href="#courses">Courses</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div>
+          <h3>Courses</h3>
+
+          <a href="#courses"> Web Development </a>
+
+          <a href="#courses"> Python </a>
+
+          <a href="#courses"> Java </a>
+
+          <a href="#courses"> Data Science </a>
+        </div>
+      </div>
+
+      <div class="copyright">© 2026 Kiran Academy. All Rights Reserved.</div>
+    </footer>
+
+    <!-- ================= COURSE MODAL ================= -->
+
+    <div class="modal" id="courseModal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeCourse()">×</button>
+
+        <h2 id="modalCourseName">Course Name</h2>
+
+        <p>Learn practical skills through structured lessons and projects.</p>
+
+        <h3 id="modalPrice">₹0</h3>
+
+        <button class="btn primary-btn" onclick="openEnrollment()">
+          Enroll Now
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= ENROLLMENT MODAL ================= -->
+
+    <div class="modal" id="enrollModal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeEnrollment()">×</button>
+
+        <h2>Enroll Now</h2>
+
+        <form id="enrollForm">
+          <input
+            type="text"
+            id="studentName"
+            placeholder="Full Name"
+            required
+          />
+
+          <input
+            type="email"
+            id="studentEmail"
+            placeholder="Email Address"
+            required
+          />
+
+          <input
+            type="tel"
+            id="studentPhone"
+            placeholder="Phone Number"
+            required
+          />
+
+          <button type="submit" class="btn primary-btn">
+            Continue to Purchase
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
